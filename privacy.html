@@ -196,11 +196,16 @@
         <section class="card">
           <h2>٦. النسخ الاحتياطي</h2>
           <p>
-            يستطيع البرنامج إنشاء نسخة احتياطية مشفَّرة في مجلد يختاره المستخدم، تشمل قاعدة
-            البيانات والمستندات. والنسخة مشفَّرة بمفتاح مُشتَقّ من <strong>مفتاح استرجاع
-            يحتفظ به المستخدم</strong> حتى تكون قابلة للاستعادة على حاسوب آخر — وفقدان هذا
-            المفتاح يعني فقدان القدرة على فتح النسخة.
+            يستطيع البرنامج إنشاء نسخة احتياطية في مجلد يختاره المستخدم، تشمل قاعدة البيانات
+            والمستندات. <strong>والنسخة غير مشفَّرة</strong>: مجلد عادي فيه ملف قاعدة البيانات
+            باسمه، والمستندات بأسمائها الأصلية، تُفتح على أي حاسوب بلا مفتاح وبلا كلمة مرور
+            وبدون البرنامج نفسه. ولا يوجد مفتاح استرجاع يحفظه المستخدم.
           </p>
+          <div class="note">
+            ومعنى ذلك صراحةً: من وصل إلى قرص النسخ الاحتياطية قرأ كل ما فيها — أسماء الموكلين
+            والقضايا والمستندات. حماية هذه النسخ هي تشفير القرص الذي تُحفظ عليه، وهو إجراء
+            أساسي لا إضافي.
+          </div>
           <p>
             مكان حفظ النسخ يختاره المستخدم ويخضع لمسؤوليته. لا يُرسل البرنامج أي نسخة احتياطية
             إلى أي خدمة سحابية.
@@ -418,12 +423,17 @@
         <section class="card">
           <h2>6. Backups</h2>
           <p>
-            The application can create an encrypted backup into a folder the user chooses,
-            covering both the database and the documents. The backup is encrypted under a key
-            derived from <strong>a recovery key the user holds</strong>, so that it can be
-            restored onto a different computer — and losing that key means losing the ability to
-            open the backup.
+            The application can create a backup into a folder the user chooses, covering both
+            the database and the documents. <strong>The backup is not encrypted</strong>: it is
+            an ordinary folder holding the database file under its own name and each document
+            under its original filename, openable on any computer with no key, no password and
+            without this application. There is no recovery key for the user to keep.
           </p>
+          <div class="note">
+            Stated plainly: anyone with access to the backup drive can read everything on it —
+            client names, cases and documents. What protects these backups is encryption of the
+            drive they are kept on, which is a necessity rather than an extra.
+          </div>
           <p>
             Where backups are kept is the user's choice and the user's responsibility. The
             application sends no backup to any cloud service.

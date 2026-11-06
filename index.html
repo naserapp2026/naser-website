@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ناصر — نظام إدارة مكتب المحاماة</title>
+    <meta
+      name="description"
+      content="ناصر: برنامج لإدارة مكتب المحاماة يعمل على حاسوب المكتب نفسه. Naser: a desktop application for managing an Egyptian law office, running entirely on the office's own computer."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="lang.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="bar">
+        <a class="wordmark" href="index.html">ناصر</a>
+        <nav>
+          <a href="index.html" aria-current="page"><span lang="ar">الرئيسية</span><span lang="en">Home</span></a>
+          <a href="privacy.html"><span lang="ar">سياسة الخصوصية</span><span lang="en">Privacy Policy</span></a>
+          <a href="terms.html"><span lang="ar">شروط الاستخدام</span><span lang="en">Terms of Service</span></a>
+        </nav>
+        <button class="lang-toggle" type="button" id="lang-toggle">
+          <span lang="ar">English</span><span lang="en">العربية</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ───────────────────────────── Arabic ───────────────────────────── -->
+      <div lang="ar">
+        <section class="card">
+          <h1>ناصر — نظام إدارة مكتب المحاماة</h1>
+          <p class="lede">
+            برنامج يعمل على حاسوب المكتب نفسه، ويحفظ القضايا والجلسات والموكلين والمستندات
+            والأتعاب في ملف واحد على القرص. لا يحتاج إلى إنترنت للعمل، ولا يرسل بيانات المكتب
+            إلى أي خادم.
+          </p>
+          <p>
+            صُمِّم ناصر ليحل محل قاعدة بيانات قديمة في مكتب محاماة مصري، فجاءت واجهته بالعربية
+            من اليمين إلى اليسار، وبمصطلحات المكتب نفسها: الموكل، والخصم، والجلسة، والرول،
+            والتوكيل، والأتعاب، والمصروفات.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>ما يفعله البرنامج</h2>
+          <ul class="features">
+            <li><strong>القضايا ومراحلها</strong>بيانات الدعوى ورقمها وسنتها القضائية، والمحكمة والدائرة، ودرجات التقاضي.</li>
+            <li><strong>الجلسات</strong>تاريخ كل جلسة ورقم الرول، وما تم فيها، وتنبيه على الحاسوب قبل موعدها.</li>
+            <li><strong>الموكلون والخصوم</strong>بطاقة لكل موكل وصفته في القضية، وبيانات التوكيل.</li>
+            <li><strong>المستندات</strong>حفظ المستندات على القرص مشفَّرة، مرتبطة بقضيتها.</li>
+            <li><strong>الأتعاب والمصروفات</strong>إيصالات التحصيل والمصروفات بالقرش المصري، لا بأرقام عشرية تقريبية.</li>
+            <li><strong>التقارير</strong>جلسات اليوم والأسبوع، وأرصدة الأتعاب، وما يحتاجه المكتب للمتابعة.</li>
+            <li><strong>النسخ الاحتياطي</strong>نسخة مشفَّرة إلى مجلد يختاره صاحب المكتب، بمفتاح استرجاع في يده، مُعدَّة لتُستعاد على حاسوب آخر.</li>
+            <li><strong>ربط اختياري بتقويم Google</strong>لتظهر مواعيد الجلسات على هاتف المحامي. يعمل البرنامج كاملًا بدونه.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>البيانات تبقى على حاسوبك</h2>
+          <p>
+            لا يوجد حساب يُنشَأ، ولا كلمة مرور للبرنامج، ولا خادم يملكه المطوِّر. هوية المستخدم
+            هي حساب Windows نفسه، وقاعدة البيانات والمستندات ملفات على القرص تحت يد صاحب المكتب.
+          </p>
+          <div class="note">
+            لا يجمع البرنامج إحصاءات استخدام، ولا يرسل تقارير أخطاء، ولا يتصل بأي خدمة على
+            الإنترنت إلا إذا رُبِط بحساب Google بموافقة صريحة من صاحب المكتب.
+          </div>
+          <p>
+            تفصيل ما يُرسَل إلى Google عند تشغيل الربط — وما لا يُرسَل أبدًا — في
+            <a href="privacy.html">سياسة الخصوصية</a>.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>ربط تقويم Google — اختياري</h2>
+          <p>
+            إذا اختار صاحب المكتب ربط حسابه، ينشئ البرنامج <strong>تقويمًا جديدًا خاصًّا به</strong>
+            باسم «ناصر — جلسات المكتب»، ويكتب فيه مواعيد الجلسات القادمة. الصلاحية المطلوبة
+            تقتصر على التقاويم التي ينشئها البرنامج نفسه
+            (<code>calendar.app.created</code>)، فلا يستطيع البرنامج قراءة تقويماتك الأخرى
+            ولا تعديلها.
+          </p>
+          <ul>
+            <li>الاتجاه واحد: من البرنامج إلى التقويم فقط. لا يقرأ البرنامج أحداث التقويم ولا يستوردها.</li>
+            <li>سجلّ المكتب في البرنامج هو الأصل، والتقويم صورة منه للاطلاع على الهاتف.</li>
+            <li>يمكن فصل الربط من داخل البرنامج في أي وقت، أو من صفحة صلاحيات حساب Google.</li>
+            <li>انقطاع الربط لا يوقف البرنامج ولا يمنع تنبيهات الجلسات على الحاسوب.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>التوفّر</h2>
+          <p>
+            ناصر برنامج لسطح المكتب على نظام Windows، يُستخدم حاليًا في المكتب الذي طُوِّر من
+            أجله ويُوزَّع توزيعًا محدودًا. هذه الصفحات منشورة لتوضيح سياسة الخصوصية وشروط
+            الاستخدام، وليست صفحة تحميل.
+          </p>
+          <p class="updated">آخر تحديث: ٦ نوفمبر ٢٠٢٦</p>
+        </section>
+      </div>
+
+      <!-- ───────────────────────────── English ──────────────────────────── -->
+      <div lang="en">
+        <section class="card">
+          <h1>Naser — Law Office Management</h1>
+          <p class="lede">
+            A desktop application that runs on the office's own computer and keeps its cases,
+            hearings, clients, documents and fees in a single file on disk. It needs no internet
+            connection to work, and it sends the office's records to no server.
+          </p>
+          <p>
+            Naser was built to replace an ageing database in an Egyptian law office. Its interface
+            is Arabic, right-to-left, and uses the office's own vocabulary for clients, opponents,
+            hearings, court roll numbers, powers of attorney, fees and expenses.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>What it does</h2>
+          <ul class="features">
+            <li><strong>Cases and stages</strong>Case subject, number and judicial year, court and circuit, and the degrees of litigation.</li>
+            <li><strong>Hearings</strong>Each hearing's date and roll number, what happened in it, and a reminder on the computer beforehand.</li>
+            <li><strong>Clients and opponents</strong>A card for every client, their capacity in the case, and power-of-attorney details.</li>
+            <li><strong>Documents</strong>Documents kept encrypted on disk, attached to the case they belong to.</li>
+            <li><strong>Fees and expenses</strong>Receipts and expenses in Egyptian piastres as whole numbers, not approximate decimals.</li>
+            <li><strong>Reports</strong>Today's and this week's hearings, outstanding fees, and what the office needs to follow up.</li>
+            <li><strong>Backup</strong>An encrypted copy to a folder the owner chooses, under a recovery key they hold, built to be restored onto a different computer.</li>
+            <li><strong>Optional Google Calendar link</strong>So hearing dates appear on the lawyer's phone. The application is fully usable without it.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>The data stays on your computer</h2>
+          <p>
+            There is no account to create, no application password, and no server owned by the
+            developer. The user's identity is the Windows account itself, and the database and
+            documents are files on disk in the owner's own hands.
+          </p>
+          <div class="note">
+            The application collects no usage statistics, sends no crash reports, and contacts no
+            service on the internet at all unless the owner explicitly connects a Google account.
+          </div>
+          <p>
+            Exactly what is sent to Google when that link is enabled — and what is never sent —
+            is set out in the <a href="privacy.html">Privacy Policy</a>.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Google Calendar link — optional</h2>
+          <p>
+            If the owner chooses to connect their account, the application creates
+            <strong>a new calendar of its own</strong>, named «ناصر — جلسات المكتب», and writes
+            upcoming hearing dates into it. The permission requested is limited to calendars the
+            application itself creates (<code>calendar.app.created</code>), so it cannot read or
+            modify any of your other calendars.
+          </p>
+          <ul>
+            <li>One direction only: application to calendar. It never reads or imports calendar events.</li>
+            <li>The office's records in the application are authoritative; the calendar is a copy to read on a phone.</li>
+            <li>The link can be disconnected inside the application at any time, or from the Google account permissions page.</li>
+            <li>A broken link never stops the application and never suppresses hearing reminders on the computer.</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Availability</h2>
+          <p>
+            Naser is a Windows desktop application, currently used in the office it was built for
+            and distributed on a limited basis. These pages are published to set out its privacy
+            policy and terms of service; this is not a download page.
+          </p>
+          <p class="updated">Last updated: 6 November 2026</p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="bar bar--footer">
+        <span><span lang="ar">ناصر — نظام إدارة مكتب المحاماة</span><span lang="en">Naser — Law Office Management</span></span>
+        <nav>
+          <a href="privacy.html"><span lang="ar">الخصوصية</span><span lang="en">Privacy</span></a>
+          <a href="terms.html"><span lang="ar">الشروط</span><span lang="en">Terms</span></a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

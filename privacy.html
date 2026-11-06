@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>سياسة الخصوصية — ناصر</title>
+    <meta
+      name="description"
+      content="سياسة خصوصية برنامج ناصر لإدارة مكتب المحاماة. Privacy Policy for Naser, a law office management desktop application."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="lang.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="bar">
+        <a class="wordmark" href="index.html">ناصر</a>
+        <nav>
+          <a href="index.html"><span lang="ar">الرئيسية</span><span lang="en">Home</span></a>
+          <a href="privacy.html" aria-current="page"><span lang="ar">سياسة الخصوصية</span><span lang="en">Privacy Policy</span></a>
+          <a href="terms.html"><span lang="ar">شروط الاستخدام</span><span lang="en">Terms of Service</span></a>
+        </nav>
+        <button class="lang-toggle" type="button" id="lang-toggle">
+          <span lang="ar">English</span><span lang="en">العربية</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ───────────────────────────── Arabic ───────────────────────────── -->
+      <div lang="ar">
+        <section class="card">
+          <h1>سياسة الخصوصية</h1>
+          <p class="updated">آخر تحديث: ٦ نوفمبر ٢٠٢٦</p>
+          <p class="lede">
+            ناصر برنامج لسطح المكتب يعمل على حاسوب المستخدم نفسه. بيانات المكتب تُحفظ على ذلك
+            الحاسوب، ولا يملك مطوِّر البرنامج خادمًا تمر به هذه البيانات ولا وسيلة للوصول إليها.
+          </p>
+          <div class="note">
+            خلاصة هذه السياسة: لا حساب يُنشَأ، ولا إحصاءات تُجمَع، ولا بيانات تُرسَل إلى أي
+            جهة — إلا ما يُكتَب في تقويم Google إذا ربط المستخدم حسابه بنفسه، وهو ربط اختياري
+            بالكامل ويمكن فصله في أي وقت.
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>١. البيانات التي يحفظها البرنامج</h2>
+          <p>
+            يُدخل المستخدم بيانات مكتبه في البرنامج، فتُحفظ في ملف قاعدة بيانات وملفات مستندات
+            على القرص الصلب لحاسوبه. وتشمل عادةً:
+          </p>
+          <ul>
+            <li>بيانات الموكلين والخصوم وصفة كل منهم في القضية، وبيانات التوكيل.</li>
+            <li>بيانات القضايا: الموضوع ورقم الدعوى والسنة القضائية والمحكمة والدائرة ودرجات التقاضي.</li>
+            <li>الجلسات: تواريخها وأرقام الرول وما تم فيها.</li>
+            <li>المستندات المرفقة بالقضايا.</li>
+            <li>الأتعاب والمصروفات وإيصالات التحصيل.</li>
+          </ul>
+          <p>
+            هذه البيانات يُدخلها المستخدم ويملكها، وهو المسؤول عنها تجاه موكليه وبموجب
+            التزاماته المهنية. البرنامج أداة حفظ وتنظيم لا أكثر.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>٢. أين تُحفظ البيانات، وما المشفَّر منها</h2>
+          <p>
+            كل ما سبق يُحفظ محليًّا في مجلد بيانات التطبيق على حاسوب المستخدم. ولأن الدقة هنا
+            تهم، هذا تفصيل ما هو مشفَّر وما ليس كذلك:
+          </p>
+          <ul>
+            <li>
+              <strong>المستندات المرفقة</strong> تُحفظ على القرص مشفَّرة بمعيار
+              AES‑256‑GCM، بمفتاح يختمه نظام التشغيل نفسه عبر
+              <span dir="ltr">Windows DPAPI</span>.
+            </li>
+            <li>
+              <strong>الأسرار المخزَّنة</strong> — ومنها رمز تحديث الربط بحساب Google —
+              مشفَّرة بالطريقة نفسها.
+            </li>
+            <li>
+              <strong>ملف قاعدة البيانات نفسه ملف <span dir="ltr">SQLite</span> غير
+              مشفَّر.</strong> الذي يحميه هو أمان الجهاز نفسه: حساب Windows وتشفير القرص.
+            </li>
+          </ul>
+          <div class="note">
+            ولذلك فإن تشفير قرص الجهاز — <span dir="ltr">BitLocker</span> أو ما يماثله — ليس
+            إجراءً إضافيًّا مستحسنًا، بل هو جزء أساسي من حماية بيانات المكتب. من وصل إلى
+            الجهاز أو إلى قرصه غير المشفَّر وصل إلى قاعدة البيانات.
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>٣. ما لا يجمعه البرنامج</h2>
+          <ul>
+            <li>لا يُنشئ البرنامج حسابًا، ولا يطلب كلمة مرور، ولا يسجِّل المستخدم في أي خدمة.</li>
+            <li>لا يجمع إحصاءات استخدام ولا تحليلات، ولا يرسل تقارير أخطاء أو انهيار.</li>
+            <li>لا يحتوي على إعلانات ولا على أي أداة تتبُّع.</li>
+            <li>لا يرسل بيانات المكتب إلى مطوِّر البرنامج، ولا يملك المطوِّر خادمًا تصل إليه.</li>
+          </ul>
+          <p>
+            وفيما عدا الاتصال بخدمات Google الموصوف في البند التالي، لا يُجري البرنامج أي اتصال
+            بالشبكة. وهو يعمل كاملًا على جهاز غير متصل بالإنترنت.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>٤. ربط تقويم Google — اختياري</h2>
+          <p>
+            لا يعمل هذا الربط إلا إذا طلبه المستخدم وأتم تسجيل الدخول بحسابه. وهو مُعطَّل عند
+            أول تشغيل، ويبقى مُعطَّلًا حتى يُفعَّل.
+          </p>
+
+          <h3>٤.١ الصلاحيات المطلوبة</h3>
+          <p>يطلب البرنامج ثلاث صلاحيات، لا غير:</p>
+          <ul>
+            <li>
+              <code dir="ltr">https://www.googleapis.com/auth/calendar.app.created</code> —
+              الوصول إلى <strong>التقاويم التي ينشئها البرنامج نفسه فقط</strong>. لا يستطيع
+              البرنامج بهذه الصلاحية قراءة تقويمات المستخدم الأخرى ولا تعديلها ولا حتى معرفة
+              وجودها.
+            </li>
+            <li><code dir="ltr">openid</code> و<code dir="ltr">email</code> — لإظهار عنوان البريد الذي تم الربط به، حتى يعرف المستخدم أي حساب موصول.</li>
+          </ul>
+
+          <h3>٤.٢ ما يُرسَل إلى تقويم Google</h3>
+          <p>
+            ينشئ البرنامج تقويمًا جديدًا خاصًّا به باسم «ناصر — جلسات المكتب»، ويكتب فيه حدثًا
+            لكل جلسة قادمة. ويحتوي الحدث على هذه البيانات وحدها:
+          </p>
+          <ul>
+            <li>أسماء موكلي القضية، أو موضوع الدعوى إن لم يكن لها موكل مسجَّل، في عنوان الحدث.</li>
+            <li>موضوع الدعوى ورقمها وسنتها القضائية.</li>
+            <li>اسم المحكمة.</li>
+            <li>رقم الرول.</li>
+            <li>تاريخ الجلسة، حدثًا ليوم كامل بلا توقيت.</li>
+            <li>سطر ثابت ينبِّه إلى أن الحدث أنشأه البرنامج وأن التعديل يكون من البرنامج.</li>
+          </ul>
+
+          <h3>٤.٣ ما لا يُرسَل إلى Google أبدًا</h3>
+          <ul>
+            <li>المستندات والمرفقات.</li>
+            <li>الأتعاب والمصروفات وأي مبلغ مالي.</li>
+            <li>أرقام الهوية أو الرقم القومي، وأرقام الهواتف، والعناوين.</li>
+            <li>أسماء الخصوم.</li>
+            <li>ما تم في الجلسة ونتائجها.</li>
+            <li>أي بيان آخر في قاعدة البيانات لم يُذكر في البند ٤.٢.</li>
+          </ul>
+
+          <h3>٤.٤ الاتجاه واحد</h3>
+          <p>
+            يكتب البرنامج في التقويم ولا يقرأ منه. لا يستورد أحداثًا، ولا يطالع تقويم المستخدم،
+            ولا يستعلم عن قائمة تقاويمه. سجلّ البرنامج هو الأصل، والتقويم صورة منه.
+          </p>
+
+          <h3>٤.٥ ما يستقبله البرنامج من Google</h3>
+          <p>
+            لا يستقبل البرنامج من خدمات Google إلا عنوان البريد الإلكتروني للحساب الموصول،
+            ورموز الدخول والتحديث اللازمة للربط. تُحفظ هذه الرموز مشفَّرة على جهاز المستخدم
+            وحده، ولكل نسخة مُثبَّتة رموزها الخاصة.
+          </p>
+
+          <h3>٤.٦ فصل الربط</h3>
+          <ul>
+            <li>من داخل البرنامج: زر فصل الربط في شاشة الإعدادات، فيُحذف الرمز المخزَّن.</li>
+            <li>من حساب Google: صفحة
+              <a dir="ltr" href="https://myaccount.google.com/permissions" rel="noopener noreferrer" target="_blank">myaccount.google.com/permissions</a>،
+              بسحب صلاحية التطبيق.
+            </li>
+          </ul>
+          <p>
+            فصل الربط يوقف الإرسال فورًا، ولا يحذف الأحداث التي سبق كتابتها في التقويم؛ يمكن
+            حذف ذلك التقويم من Google يدويًّا. وفصل الربط لا يمس بيانات المكتب في البرنامج،
+            ولا يوقف تنبيهات الجلسات على الحاسوب.
+          </p>
+
+          <h3>٤.٧ معالجة Google للبيانات</h3>
+          <p>
+            ما يُكتَب في تقويم Google يصبح خاضعًا لسياسة خصوصية Google وشروطها، وهي جهة
+            مستقلة عن هذا البرنامج. تفعيل الربط يعني الموافقة على ذلك.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>٥. الاستخدام المحدود لبيانات Google</h2>
+          <p>
+            يلتزم استخدام ناصر للمعلومات الواردة من واجهات Google البرمجية بسياسة
+            <span dir="ltr">Google API Services User Data Policy</span>، بما فيها متطلبات
+            الاستخدام المحدود <span dir="ltr">(Limited Use)</span>. وعلى وجه التحديد: لا
+            تُستخدم بيانات Google في الإعلانات، ولا تُبَاع، ولا تُنقَل إلى أي طرف ثالث، ولا
+            تُستخدم في تدريب نماذج ذكاء اصطناعي، ولا يطالعها أحد من البشر. وهذه البيانات لا
+            تغادر جهاز المستخدم أصلًا.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>٦. النسخ الاحتياطي</h2>
+          <p>
+            يستطيع البرنامج إنشاء نسخة احتياطية مشفَّرة في مجلد يختاره المستخدم، تشمل قاعدة
+            البيانات والمستندات. والنسخة مشفَّرة بمفتاح مُشتَقّ من <strong>مفتاح استرجاع
+            يحتفظ به المستخدم</strong> حتى تكون قابلة للاستعادة على حاسوب آخر — وفقدان هذا
+            المفتاح يعني فقدان القدرة على فتح النسخة.
+          </p>
+          <p>
+            مكان حفظ النسخ يختاره المستخدم ويخضع لمسؤوليته. لا يُرسل البرنامج أي نسخة احتياطية
+            إلى أي خدمة سحابية.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>٧. المشاركة مع الغير والاحتفاظ والحذف</h2>
+          <p>
+            لا يُشارك البرنامج بيانات المستخدم مع أي طرف ثالث، ولا يبيعها، ولا يستخدمها في أي
+            غرض آخر. ولا يوجد طرف ثالث يعالج هذه البيانات، فيما عدا تقويم Google إذا فُعِّل
+            الربط كما هو موصوف أعلاه.
+          </p>
+          <p>
+            تبقى البيانات على جهاز المستخدم ما بقيت، فهو من يحتفظ بها ومن يحذفها: حذف السجل من
+            داخل البرنامج، أو حذف ملف قاعدة البيانات ومجلد المستندات والنسخ الاحتياطية، أو
+            إزالة البرنامج من الجهاز. ولا يملك المطوِّر نسخة يحذفها بالنيابة عن المستخدم.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>٨. الأطفال</h2>
+          <p>
+            ناصر برنامج مهني موجَّه إلى مكاتب المحاماة، وليس موجَّهًا إلى الأطفال، ولا يجمع
+            بيانات منهم عن قصد.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>٩. تغيير هذه السياسة</h2>
+          <p>
+            قد تُحدَّث هذه السياسة إذا تغيَّر ما يفعله البرنامج. ويظهر تاريخ آخر تحديث في أعلى
+            الصفحة، ويُنشر النص الجديد على هذا العنوان نفسه.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>١٠. التواصل</h2>
+          <p>للأسئلة المتعلقة بهذه السياسة أو ببيانات البرنامج:</p>
+          <p class="placeholder">
+            [ موضع بريد التواصل — يُستبدَل هذا السطر ببريد إلكتروني حقيقي يمكن استقباله ]
+          </p>
+        </section>
+      </div>
+
+      <!-- ───────────────────────────── English ──────────────────────────── -->
+      <div lang="en">
+        <section class="card">
+          <h1>Privacy Policy</h1>
+          <p class="updated">Last updated: 6 November 2026</p>
+          <p class="lede">
+            Naser is a desktop application that runs on the user's own computer. The office's
+            records are kept on that computer. The developer operates no server through which
+            those records pass, and has no means of reaching them.
+          </p>
+          <div class="note">
+            In short: no account is created, no statistics are collected, and no data is sent
+            anywhere — except what is written into Google Calendar if the user connects their own
+            account, which is entirely optional and can be disconnected at any time.
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>1. The data the application holds</h2>
+          <p>
+            The user enters their office's records into the application, and they are stored in a
+            database file and document files on their own hard disk. They typically include:
+          </p>
+          <ul>
+            <li>Clients and opposing parties, each one's capacity in the case, and power-of-attorney details.</li>
+            <li>Case details: subject, case number, judicial year, court, circuit and degrees of litigation.</li>
+            <li>Hearings: their dates, roll numbers and what took place.</li>
+            <li>Documents attached to cases.</li>
+            <li>Fees, expenses and collection receipts.</li>
+          </ul>
+          <p>
+            This data is entered and owned by the user, who remains responsible for it towards
+            their clients and under their professional obligations. The application is a tool for
+            keeping and organising it, nothing more.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>2. Where the data is stored, and what is encrypted</h2>
+          <p>
+            All of the above is stored locally, in the application's data folder on the user's
+            computer. Because precision matters here, this is what is encrypted and what is not:
+          </p>
+          <ul>
+            <li>
+              <strong>Attached documents</strong> are stored on disk encrypted with AES-256-GCM,
+              under a key sealed by the operating system itself through Windows DPAPI.
+            </li>
+            <li>
+              <strong>Stored secrets</strong> — including the refresh token for a Google
+              account link — are encrypted the same way.
+            </li>
+            <li>
+              <strong>The database file itself is an unencrypted SQLite file.</strong> What
+              protects it is the security of the machine: the Windows account and disk encryption.
+            </li>
+          </ul>
+          <div class="note">
+            Full-disk encryption — BitLocker or equivalent — is therefore not an optional extra
+            but a load-bearing part of protecting the office's data. Anyone with access to the
+            machine, or to its unencrypted disk, has access to the database.
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>3. What the application does not collect</h2>
+          <ul>
+            <li>It creates no account, asks for no password, and registers the user with no service.</li>
+            <li>It collects no usage statistics or analytics, and sends no error or crash reports.</li>
+            <li>It contains no advertising and no tracking of any kind.</li>
+            <li>It sends no office data to the developer, who operates no server for it to reach.</li>
+          </ul>
+          <p>
+            Apart from the Google connection described in the next section, the application makes
+            no network requests at all. It works in full on a computer with no internet connection.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>4. Google Calendar link — optional</h2>
+          <p>
+            This link operates only if the user asks for it and signs in with their own account.
+            It is off on first run and stays off until it is switched on.
+          </p>
+
+          <h3>4.1 The permissions requested</h3>
+          <p>The application requests three scopes and no others:</p>
+          <ul>
+            <li>
+              <code>https://www.googleapis.com/auth/calendar.app.created</code> — access to
+              <strong>only the calendars the application itself creates</strong>. With this scope
+              the application cannot read, modify, or even learn of the existence of the user's
+              other calendars.
+            </li>
+            <li><code>openid</code> and <code>email</code> — to display the address that was connected, so the user knows which account is linked.</li>
+          </ul>
+
+          <h3>4.2 What is sent to Google Calendar</h3>
+          <p>
+            The application creates a new calendar of its own, named «ناصر — جلسات المكتب», and
+            writes one event into it for each upcoming hearing. The event contains only:
+          </p>
+          <ul>
+            <li>The names of the case's clients — or the case subject, if no client is recorded — in the event title.</li>
+            <li>The case subject, its number and its judicial year.</li>
+            <li>The name of the court.</li>
+            <li>The court roll number.</li>
+            <li>The hearing date, as an all-day event with no time of day.</li>
+            <li>A fixed line noting that the event was created by the application and should be edited there.</li>
+          </ul>
+
+          <h3>4.3 What is never sent to Google</h3>
+          <ul>
+            <li>Documents and attachments.</li>
+            <li>Fees, expenses, or any monetary amount.</li>
+            <li>National ID numbers, telephone numbers and addresses.</li>
+            <li>Names of opposing parties.</li>
+            <li>What took place at a hearing, and its outcome.</li>
+            <li>Any other field in the database not listed in 4.2.</li>
+          </ul>
+
+          <h3>4.4 One direction only</h3>
+          <p>
+            The application writes to the calendar and does not read from it. It imports no
+            events, never inspects the user's own calendar, and does not list their calendars.
+            The application's records are authoritative; the calendar is a copy of them.
+          </p>
+
+          <h3>4.5 What the application receives from Google</h3>
+          <p>
+            From Google's services the application receives only the email address of the
+            connected account, and the access and refresh tokens the link requires. Those tokens
+            are stored encrypted on the user's machine alone, and each installation holds its own.
+          </p>
+
+          <h3>4.6 Disconnecting</h3>
+          <ul>
+            <li>In the application: the disconnect button on the settings screen, which deletes the stored token.</li>
+            <li>From the Google account: the
+              <a href="https://myaccount.google.com/permissions" rel="noopener noreferrer" target="_blank">myaccount.google.com/permissions</a>
+              page, by removing the application's access.
+            </li>
+          </ul>
+          <p>
+            Disconnecting stops any further sending immediately. It does not delete events already
+            written to the calendar; that calendar can be deleted in Google by hand. Disconnecting
+            touches none of the office's data in the application, and does not stop hearing
+            reminders on the computer.
+          </p>
+
+          <h3>4.7 Google's own handling of the data</h3>
+          <p>
+            Whatever is written into Google Calendar becomes subject to Google's privacy policy
+            and terms, Google being independent of this application. Enabling the link is consent
+            to that.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>5. Limited Use of Google data</h2>
+          <p>
+            Naser's use of information received from Google APIs adheres to the
+            Google API Services User Data Policy, including the Limited Use requirements.
+            Specifically: Google data is not used for advertising, is not sold, is not transferred
+            to any third party, is not used to train artificial-intelligence models, and is not
+            read by any human. That data does not leave the user's machine in the first place.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>6. Backups</h2>
+          <p>
+            The application can create an encrypted backup into a folder the user chooses,
+            covering both the database and the documents. The backup is encrypted under a key
+            derived from <strong>a recovery key the user holds</strong>, so that it can be
+            restored onto a different computer — and losing that key means losing the ability to
+            open the backup.
+          </p>
+          <p>
+            Where backups are kept is the user's choice and the user's responsibility. The
+            application sends no backup to any cloud service.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>7. Sharing, retention and deletion</h2>
+          <p>
+            The application shares the user's data with no third party, sells it to no one, and
+            uses it for no other purpose. No third party processes this data, other than Google
+            Calendar where the link has been enabled as described above.
+          </p>
+          <p>
+            The data remains on the user's machine for as long as they keep it there. They retain
+            it and they delete it: by deleting the record inside the application, by deleting the
+            database file, the documents folder and the backups, or by uninstalling the
+            application. The developer holds no copy to delete on the user's behalf.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>8. Children</h2>
+          <p>
+            Naser is professional software intended for law offices. It is not directed at
+            children and does not knowingly collect data from them.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>9. Changes to this policy</h2>
+          <p>
+            This policy may be updated if what the application does changes. The date of the last
+            update appears at the top of this page, and the new text is published at this same
+            address.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>10. Contact</h2>
+          <p>For questions about this policy or about the application's data:</p>
+          <p class="placeholder">
+            [ CONTACT EMAIL PLACEHOLDER — replace this line with a real, reachable email address ]
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="bar bar--footer">
+        <span><span lang="ar">ناصر — نظام إدارة مكتب المحاماة</span><span lang="en">Naser — Law Office Management</span></span>
+        <nav>
+          <a href="index.html"><span lang="ar">الرئيسية</span><span lang="en">Home</span></a>
+          <a href="terms.html"><span lang="ar">الشروط</span><span lang="en">Terms</span></a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

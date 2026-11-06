@@ -1,0 +1,237 @@
+/*
+  One stylesheet for the three pages.
+
+  No framework and no webfont: the pages must load on a slow connection and
+  must not report a visitor to a third party, which a hosted font does.
+*/
+
+:root {
+  --ink: #1b2430;
+  --muted: #5a6575;
+  --line: #e2e6ec;
+  --paper: #ffffff;
+  --wash: #f6f8fa;
+  --accent: #1f4e79;
+  --accent-wash: #eef3f8;
+  --radius: 10px;
+  --measure: 46rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Segoe UI', 'Noto Sans Arabic', Tahoma, system-ui, -apple-system, sans-serif;
+  line-height: 1.75;
+  color: var(--ink);
+  background: var(--wash);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* ── language ──────────────────────────────────────────────────────────
+   Both languages are in the page. Without JavaScript both are shown,
+   which is worse-looking and still correct; with it, one at a time. */
+html[data-lang='ar'] [lang='en'],
+html[data-lang='en'] [lang='ar'] {
+  display: none;
+}
+
+header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.bar {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.wordmark {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+nav a[aria-current='page'] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+.lang-toggle {
+  margin-inline-start: auto;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: var(--paper);
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+}
+
+.lang-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+main {
+  flex: 1;
+  max-width: var(--measure);
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 3.5rem;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.35;
+  margin: 0 0 0.35rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.5rem;
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 1.25rem 0 0.35rem;
+}
+
+p,
+li {
+  color: var(--ink);
+}
+
+.lede {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.updated {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+ul {
+  padding-inline-start: 1.25rem;
+}
+
+li {
+  margin: 0.3rem 0;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* A fact worth not missing, and a thing the owner must still fill in. */
+.note {
+  background: var(--accent-wash);
+  border-inline-start: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  margin: 1rem 0;
+}
+
+.placeholder {
+  background: #fff6e5;
+  border: 1px dashed #c98a00;
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+.features {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 40rem) {
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.features li {
+  background: var(--wash);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  margin: 0;
+}
+
+.features strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.bar--footer {
+  gap: 0.5rem 1.25rem;
+}
+
+footer a {
+  color: var(--muted);
+}
+
+footer a:hover {
+  color: var(--accent);
+}
